@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Form</title>
+    <link rel="stylesheet" href="../public/style.css" />
+    <style>
+      * {
+    box-sizing: border-box;
+  }hj
+  
+  body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin: 15px 30px;
+    font-size: 17px;
+    padding: 8px;
+  }
+  
+  .container {
+    background-color: rgb(245, 241, 235);
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgb(90, 23, 99);
+    margin: 10px;
+  }
+  fieldset {
+    background-color: white;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgb(230, 194, 235);
+  }
+  
+  input[type="submit"] {
+    background-color: rgb(216, 154, 95);
+    color: rgb(102, 7, 7);
+    padding: 15px;
+    border: none;
+    text-indent: 5px;
+    font-size: 0.6cm;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+  input[type="submit"]:hover {
+    background-color: blueviolet;
+  }
+  img {
+    height: 650px;
+  }
+  .clip {
+    clip-path: circle(43% at 50% 50%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+    </style>
+  </head>
+  <body>
+    {{>navbar}}
+    <div class="container">
+      <form action="/register" method="POST">
+        <h1 align="center">Welcome to the Judge0 Api </h1>
+           <h2 align="center"> Sign-Up</h2> </h2>
+        <h2>Personal Information</h2>
+        <p>Required Fields Are followed by *</p>
+       
+       
+        <p>Name: *<input type="text" name="name" id="name" required /></p>
+        <p>Email: *<input type="email" name="email" id="email" required /></p>
+        
+        <p>Password *
+            <input type="password" name="pass" id=" password" required />
+        </p>
+        <p>Confirm password *
+            <input type="password" name="Cpass" id= "C_password" required />
+        </p>
+        <hr />
+        <input type="submit" value="Register" />
+      </form>
+      <h2 align="center">Made By</h2>
+      <h3 align="center">Rohan Sirsha</h3>
+    </div>
+  </body>
+</html>
